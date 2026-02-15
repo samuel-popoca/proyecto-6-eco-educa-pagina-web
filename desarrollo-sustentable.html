@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desarrollo Sustentable</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">Eco-Educa</div>
+  <div>
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    <button class="dark-btn" onclick="toggleDark()">🌙</button>
+  </div>
+</header>
+
+<!-- MENÚ IZQUIERDO -->
+<div class="side-menu" id="menu">
+  <div class="menu-top">
+    <strong>Eco-Educa</strong>
+    <span class="close-btn" onclick="closeMenu()">✕</span>
+  </div>
+
+  <a href="index.html">🏠 Inicio</a>
+  <a href="sustentabilidad.html">🌱 Sustentabilidad</a>
+  <a href="sostenibilidad.html">♻️ Sostenibilidad</a>
+  <a href="medio-ambiente.html">🌍 Medio Ambiente</a>
+  <a href="problemas-ambientales.html">⚠️ Problemas</a>
+  <a href="cambio-climatico.html">🌡️ Cambio Climático</a>
+  <a href="contaminacion.html">🏭 Contaminación</a>
+  <a href="reciclaje.html">🔄 Reciclaje</a>
+  <a href="energia-renovable.html">☀️ Energías</a>
+  <a href="biodiversidad.html">🦋 Biodiversidad</a>
+  <a href="agua.html">💧 Agua</a>
+  <a href="desarrollo-sustentable.html">🌿 Desarrollo Sustentable</a>
+
+  <div class="sidebar-bottom">
+    <a href="conocenos.html">👤 Conócenos</a>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Desarrollo Sustentable</h1>
+  <div class="green-line"></div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+  <!-- DEFINICIÓN -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>¿Qué es el desarrollo sustentable?</h2>
+      <p>
+        El desarrollo sustentable es un enfoque de crecimiento económico y social que busca satisfacer las necesidades presentes sin comprometer la capacidad de las futuras generaciones para satisfacer sus propias necesidades.
+      </p>
+      <p>
+        Integra aspectos económicos, sociales y ambientales para lograr un equilibrio entre progreso y preservación del planeta.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/desarrollo-general.jpg" alt="Desarrollo sustentable">
+    </div>
+  </div>
+
+  <!-- PRINCIPIOS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Principios del desarrollo sustentable</h2>
+      <ul>
+        <li>Equilibrio entre economía, sociedad y medio ambiente.</li>
+        <li>Uso responsable de recursos naturales.</li>
+        <li>Reducción de pobreza y desigualdad.</li>
+        <li>Participación comunitaria en decisiones ambientales.</li>
+        <li>Fomento de innovación y tecnología sostenible.</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="IMG/desarrollo-principios.jpg" alt="Principios del desarrollo sustentable">
+    </div>
+  </div>
+
+  <!-- OBJETIVOS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Objetivos principales</h2>
+      <ul>
+        <li>Garantizar el acceso a recursos naturales para todos.</li>
+        <li>Preservar ecosistemas y biodiversidad.</li>
+        <li>Promover energías limpias y eficiencia energética.</li>
+        <li>Reducir desigualdades económicas y sociales.</li>
+        <li>Impulsar educación y conciencia ambiental.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SITUACIÓN MUNDIAL -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Desarrollo sustentable a nivel global</h2>
+      <p>
+        Los países buscan implementar políticas de desarrollo sostenible mediante acuerdos internacionales como los Objetivos de Desarrollo Sostenible (ODS) de la ONU.
+        Se prioriza la reducción de pobreza, igualdad de género, energías limpias y protección del medio ambiente.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/desarrollo-mundo.jpg" alt="Desarrollo sustentable global">
+    </div>
+  </div>
+
+  <!-- EJEMPLOS Y ACCIONES -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Ejemplos de acciones sustentables</h2>
+      <ul>
+        <li>Uso de energías renovables en industrias y hogares.</li>
+        <li>Reforestación y conservación de áreas naturales.</li>
+        <li>Reducción y reciclaje de residuos.</li>
+        <li>Educación ambiental y campañas de concienciación.</li>
+        <li>Promoción de transporte sostenible como bicicletas y transporte público eléctrico.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONCLUSIÓN -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Conclusión</h2>
+      <p>
+        El desarrollo sustentable es esencial para garantizar un futuro equilibrado, justo y seguro. Requiere de cooperación internacional, políticas efectivas y cambios en hábitos individuales para proteger el planeta y asegurar bienestar social y económico para todos.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 SamuelCompanyX
+</footer>
+
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("loader").classList.add("hide");
+});
+
+const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+
+function openMenu() {
+  menu.classList.add("open");
+  overlay.classList.add("show");
+}
+function closeMenu() {
+  menu.classList.remove("open");
+  overlay.classList.remove("show");
+}
+
+if (localStorage.getItem("dark")) {
+  document.body.classList.add("dark");
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark", true);
+  } else {
+    localStorage.removeItem("dark");
+  }
+}
+
+/* Animación tipo Apple */
+const elements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+    else entry.target.classList.remove("show");
+  });
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

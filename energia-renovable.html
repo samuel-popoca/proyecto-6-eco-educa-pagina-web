@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energías Renovables</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">Eco-Educa</div>
+  <div>
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    <button class="dark-btn" onclick="toggleDark()">🌙</button>
+  </div>
+</header>
+
+<!-- MENÚ IZQUIERDO -->
+<div class="side-menu" id="menu">
+  <div class="menu-top">
+    <strong>Eco-Educa</strong>
+    <span class="close-btn" onclick="closeMenu()">✕</span>
+  </div>
+
+  <a href="index.html">🏠 Inicio</a>
+  <a href="sustentabilidad.html">🌱 Sustentabilidad</a>
+  <a href="sostenibilidad.html">♻️ Sostenibilidad</a>
+  <a href="medio-ambiente.html">🌍 Medio Ambiente</a>
+  <a href="problemas-ambientales.html">⚠️ Problemas</a>
+  <a href="cambio-climatico.html">🌡️ Cambio Climático</a>
+  <a href="contaminacion.html">🏭 Contaminación</a>
+  <a href="reciclaje.html">🔄 Reciclaje</a>
+  <a href="energia-renovable.html">☀️ Energías</a>
+  <a href="biodiversidad.html">🦋 Biodiversidad</a>
+  <a href="agua.html">💧 Agua</a>
+  <a href="desarrollo-sustentable.html">🌿 Desarrollo Sustentable</a>
+
+  <div class="sidebar-bottom">
+    <a href="conocenos.html">👤 Conócenos</a>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Energías Renovables</h1>
+  <div class="green-line"></div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+  <!-- DEFINICIÓN -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>¿Qué son las energías renovables?</h2>
+      <p>
+        Las energías renovables son aquellas fuentes de energía obtenidas de recursos naturales inagotables o que se regeneran constantemente, como el sol, viento, agua o biomasa.
+      </p>
+      <p>
+        A diferencia de los combustibles fósiles, no producen emisiones significativas de gases de efecto invernadero y su uso es clave para la mitigación del cambio climático.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/energia-general.jpg" alt="Energías renovables">
+    </div>
+  </div>
+
+  <!-- TIPOS DE ENERGÍAS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Tipos principales</h2>
+      <ul>
+        <li><strong>Energía solar:</strong> Se obtiene del sol mediante paneles fotovoltaicos o sistemas térmicos.</li>
+        <li><strong>Energía eólica:</strong> Aprovecha la fuerza del viento mediante aerogeneradores para producir electricidad.</li>
+        <li><strong>Energía hidráulica:</strong> Utiliza el movimiento del agua en ríos y presas para generar energía.</li>
+        <li><strong>Energía geotérmica:</strong> Se obtiene del calor interno de la Tierra, especialmente en zonas volcánicas.</li>
+        <li><strong>Biomasa:</strong> Energía a partir de residuos orgánicos como madera, residuos agrícolas o desechos forestales.</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="IMG/energia-tipos.jpg" alt="Tipos de energías renovables">
+    </div>
+  </div>
+
+  <!-- VENTAJAS Y DESVENTAJAS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Ventajas y desventajas</h2>
+      <ul>
+        <li><strong>Ventajas:</strong> Inagotables, limpias, reducen gases contaminantes, generan empleo verde, fomentan desarrollo sostenible.</li>
+        <li><strong>Desventajas:</strong> Alto costo inicial, dependencia climática, almacenamiento limitado, infraestructura costosa.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SITUACIÓN -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Energías renovables en México y el mundo</h2>
+      <p>
+        México tiene gran potencial solar y eólico, destacando el norte para energía solar y Oaxaca para energía eólica. Globalmente, países como Alemania, China y Dinamarca lideran en inversión y desarrollo de energías limpias.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/energia-mundo.jpg" alt="Energías renovables en el mundo">
+    </div>
+  </div>
+
+  <!-- ACCIONES Y CONCLUSIÓN -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Acciones para impulsar energías limpias</h2>
+      <ul>
+        <li>Instalación de paneles solares y molinos eólicos.</li>
+        <li>Fomento de eficiencia energética en industrias y hogares.</li>
+        <li>Promoción de políticas públicas verdes y subsidios a energías limpias.</li>
+        <li>Educación ambiental y conciencia sobre reducción de emisiones.</li>
+      </ul>
+      <h2>Conclusión</h2>
+      <p>
+        Las energías renovables son fundamentales para garantizar un futuro sostenible, reducir el impacto ambiental y avanzar hacia un planeta más limpio y seguro para las próximas generaciones.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 SamuelCompanyX
+</footer>
+
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("loader").classList.add("hide");
+});
+
+const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+
+function openMenu() {
+  menu.classList.add("open");
+  overlay.classList.add("show");
+}
+function closeMenu() {
+  menu.classList.remove("open");
+  overlay.classList.remove("show");
+}
+
+if (localStorage.getItem("dark")) {
+  document.body.classList.add("dark");
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark", true);
+  } else {
+    localStorage.removeItem("dark");
+  }
+}
+
+/* Animación tipo Apple */
+const elements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+    else entry.target.classList.remove("show");
+  });
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
+

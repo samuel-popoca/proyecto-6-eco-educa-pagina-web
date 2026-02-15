@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medio Ambiente</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">Eco-Educa</div>
+  <div>
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    <button class="dark-btn" onclick="toggleDark()">🌙</button>
+  </div>
+</header>
+
+<!-- MENÚ IZQUIERDO -->
+<div class="side-menu" id="menu">
+  <div class="menu-top">
+    <strong>Eco-Educa</strong>
+    <span class="close-btn" onclick="closeMenu()">✕</span>
+  </div>
+
+  <a href="index.html">🏠 Inicio</a>
+  <a href="sustentabilidad.html">🌱 Sustentabilidad</a>
+  <a href="sostenibilidad.html">♻️ Sostenibilidad</a>
+  <a href="medio-ambiente.html">🌍 Medio Ambiente</a>
+  <a href="problemas-ambientales.html">⚠️ Problemas</a>
+  <a href="cambio-climatico.html">🌡️ Cambio Climático</a>
+  <a href="contaminacion.html">🏭 Contaminación</a>
+  <a href="reciclaje.html">🔄 Reciclaje</a>
+  <a href="energia-renovable.html">☀️ Energías</a>
+  <a href="biodiversidad.html">🦋 Biodiversidad</a>
+  <a href="agua.html">💧 Agua</a>
+  <a href="desarrollo-sustentable.html">🌿 Desarrollo Sustentable</a>
+
+  <div class="sidebar-bottom">
+    <a href="conocenos.html">👤 Conócenos</a>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Medio Ambiente</h1>
+  <div class="green-line"></div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+  <!-- DEFINICIÓN -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>¿Qué es el medio ambiente?</h2>
+      <p>
+        El medio ambiente es el conjunto de elementos naturales, artificiales y culturales que interactúan
+        y permiten la vida en la Tierra. Incluye aire, agua, suelo, flora, fauna y ecosistemas.
+      </p>
+      <p>
+        Mantener un equilibrio ambiental es fundamental para la supervivencia de todas las especies, incluida la humana.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/medioambiente.jpg" alt="Paisaje natural">
+    </div>
+  </div>
+
+  <!-- IMPORTANCIA -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Importancia del medio ambiente</h2>
+      <p>
+       El medio ambiente es fundamental para la vida en la Tierra, ya que proporciona los recursos naturales esenciales para la supervivencia de los seres vivos, como el aire, el agua, el suelo y la biodiversidad. Mantener un entorno saludable garantiza el equilibrio de los ecosistemas, que regulan el clima, purifican el aire y el agua, y sostienen la producción de alimentos.
+
+Cuidar el medio ambiente también es clave para prevenir desastres naturales y la contaminación, que afectan directamente la salud humana y la economía. Además, conservar nuestros recursos naturales asegura un desarrollo sostenible para las futuras generaciones, fomentando un planeta más justo, limpio y habitable.      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/importancia-medio.jpg" alt="Importancia del medio ambiente">
+    </div>
+  </div>
+
+  <!-- PROBLEMAS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Problemas ambientales más comunes</h2>
+      <ul>
+        <li>Contaminación del aire, agua y suelo</li>
+        <li>Deforestación y pérdida de biodiversidad</li>
+        <li>Cambio climático y aumento de temperaturas</li>
+        <li>Agotamiento de recursos naturales</li>
+        <li>Desequilibrio de ecosistemas</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="IMG/problemas-ambiente.jpg" alt="Problemas ambientales">
+    </div>
+  </div>
+
+  <!-- PRÁCTICAS SUSTENTABLES -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Prácticas sustentables y sostenibles</h2>
+      <p>
+        Adoptar prácticas sostenibles ayuda a reducir el impacto ambiental. Entre ellas destacan:
+      </p>
+      <ul>
+        <li>Reciclaje y reducción de residuos</li>
+        <li>Uso eficiente de energía y agua</li>
+        <li>Movilidad sostenible (bicicleta, transporte público)</li>
+        <li>Protección de ecosistemas y reforestación</li>
+        <li>Educación ambiental en la comunidad</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HUELLAS DE CARBONO -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Huella de carbono</h2>
+      <p>
+        La huella de carbono representa la cantidad de gases de efecto invernadero que generamos con nuestras acciones,
+        como el consumo de energía, transporte y alimentación.
+      </p>
+      <p>
+        Reducir nuestra huella contribuye a combatir el cambio climático y protege el medio ambiente.
+      </p>
+    </div>
+  </div>
+
+  <!-- RECOMENDACIONES PSICOLÓGICAS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Recomendaciones psicológicas para cuidar el medio ambiente</h2>
+      <ul>
+        <li>Fomentar hábitos diarios sostenibles en casa y trabajo</li>
+        <li>Conectar con la naturaleza para aumentar conciencia ecológica</li>
+        <li>Educar a hijos y comunidad sobre la importancia ambiental</li>
+        <li>Gestionar ansiedad ambiental realizando acciones concretas</li>
+        <li>Establecer metas sostenibles y celebrarlas</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="IMG/psicologia-ambiental.jpg" alt="Psicología ambiental">
+    </div>
+  </div>
+
+  <!-- CONCLUSIÓN -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Conclusión</h2>
+      <p>
+        Proteger el medio ambiente es responsabilidad de todos. Adoptando prácticas sostenibles, reduciendo la huella de carbono
+        y promoviendo educación ambiental, podemos garantizar un planeta saludable y equilibrado para las próximas generaciones.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 SamuelCompanyX
+</footer>
+
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("loader").classList.add("hide");
+});
+
+const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+
+function openMenu() {
+  menu.classList.add("open");
+  overlay.classList.add("show");
+}
+function closeMenu() {
+  menu.classList.remove("open");
+  overlay.classList.remove("show");
+}
+
+if (localStorage.getItem("dark")) {
+  document.body.classList.add("dark");
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark", true);
+  } else {
+    localStorage.removeItem("dark");
+  }
+}
+
+/* Animación tipo Apple */
+const elements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+    else entry.target.classList.remove("show");
+  });
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+

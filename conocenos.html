@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conócenos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">Eco-Educa</div>
+  <div>
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    <button class="dark-btn" onclick="toggleDark()">🌙</button>
+  </div>
+</header>
+
+<!-- MENÚ IZQUIERDO -->
+<div class="side-menu" id="menu">
+  <div class="menu-top">
+    <strong>Eco-Educa</strong>
+    <span class="close-btn" onclick="closeMenu()">✕</span>
+  </div>
+
+  <a href="index.html">🏠 Inicio</a>
+  <a href="sustentabilidad.html">🌱 Sustentabilidad</a>
+  <a href="sostenibilidad.html">♻️ Sostenibilidad</a>
+  <a href="medio-ambiente.html">🌍 Medio Ambiente</a>
+  <a href="problemas-ambientales.html">⚠️ Problemas</a>
+  <a href="cambio-climatico.html">🌡️ Cambio Climático</a>
+  <a href="contaminacion.html">🏭 Contaminación</a>
+  <a href="reciclaje.html">🔄 Reciclaje</a>
+  <a href="energia-renovable.html">☀️ Energías</a>
+  <a href="biodiversidad.html">🦋 Biodiversidad</a>
+  <a href="agua.html">💧 Agua</a>
+  <a href="desarrollo-sustentable.html">🌿 Desarrollo Sustentable</a>
+
+  <div class="sidebar-bottom">
+    <a href="conocenos.html">👤 Conócenos</a>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Conócenos</h1>
+  <div class="green-line"></div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+  <!-- QUIÉNES SOMOS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Quiénes somos</h2>
+      <p>
+        SamuelCompany X es una empresa dedicada a impulsar la presencia digital de negocios y proyectos mediante soluciones tecnológicas integrales. Nos especializamos en diseño y desarrollo de páginas web modernas, funcionales y adaptadas a las necesidades de cada cliente, asegurando una experiencia de usuario atractiva y efectiva. Además, ofrecemos servicios de ciberseguridad, protegiendo la información y los sistemas de nuestros clientes frente a amenazas digitales, garantizando la seguridad y confianza en cada interacción online. En SamuelCompany X, combinamos creatividad, tecnología y seguridad para que su negocio destaque en el mundo digital.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/equipe-ecoeduca.jpg" alt="Equipo Eco-Educa">
+    </div>
+  </div>
+
+ <!-- MISIÓN -->
+<div class="content reveal">
+  <div class="text">
+    <h2>Integrantes:</h2>
+    <ul>
+      <li>Samuel Popoca González</li>
+      <li>Alexis Daniel Flores Hernández</li>
+    </ul>
+  </div>
+</div>
+
+   <!-- MISIÓN -->
+<div class="content reveal">
+  <div class="text">
+    <h2>Datos:</h2>
+    <ul>
+      <li>Escuela: Tlachco #309</li>
+      <li>Profesor: Eduardo Nájera Cano</li>
+      <li>Materia: Tecnología III</li>
+      <li>Proyecto: Eco-Educa</li>
+
+    </ul>
+  </div>
+</div>
+  <!-- CONTACTO -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Contacto</h2>
+      <p>
+        Si desea conocernos más puede enviar un mensaje a nuestro <a href="https://wa.me/7621116313" target="_blank">WhatsApp</a> o seguirnos en nuestras redes sociales.
+
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 SamuelCompanyX
+</footer>
+
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("loader").classList.add("hide");
+});
+
+const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+
+function openMenu() {
+  menu.classList.add("open");
+  overlay.classList.add("show");
+}
+function closeMenu() {
+  menu.classList.remove("open");
+  overlay.classList.remove("show");
+}
+
+if (localStorage.getItem("dark")) {
+  document.body.classList.add("dark");
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark", true);
+  } else {
+    localStorage.removeItem("dark");
+  }
+}
+
+/* Animación tipo Apple */
+const elements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+    else entry.target.classList.remove("show");
+  });
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+

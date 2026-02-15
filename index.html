@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Educa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">Eco-Educa</div>
+  <div>
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    <button class="dark-btn" onclick="toggleDark()">🌙</button>
+  </div>
+</header>
+
+<!-- MENÚ IZQUIERDO -->
+<div class="side-menu" id="menu">
+  <div class="menu-top">
+    <strong>Eco-Educa</strong>
+    <span class="close-btn" onclick="closeMenu()">✕</span>
+  </div>
+
+  <a href="index.html">🏠 Inicio</a>
+  <a href="sustentabilidad.html">🌱 Sustentabilidad</a>
+  <a href="sostenibilidad.html">♻️ Sostenibilidad</a>
+  <a href="medio-ambiente.html">🌍 Medio Ambiente</a>
+  <a href="problemas-ambientales.html">⚠️ Problemas</a>
+  <a href="cambio-climatico.html">🌡️ Cambio Climático</a>
+  <a href="contaminacion.html">🏭 Contaminación</a>
+  <a href="reciclaje.html">🔄 Reciclaje</a>
+  <a href="energia-renovable.html">☀️ Energías</a>
+  <a href="biodiversidad.html">🦋 Biodiversidad</a>
+  <a href="agua.html">💧 Agua</a>
+  <a href="desarrollo-sustentable.html">🌿 Desarrollo Sustentable</a>
+
+  <div class="sidebar-bottom">
+    <a href="conocenos.html">👤 Conócenos</a>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Eco-Educa</h1>
+  <p class="subline">POR UN MEJOR FUTURO 
+  <div class="green-line"></div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+  <!-- PRÁCTICAS SUSTENTABLES -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Prácticas sustentables y sostenibles</h2>
+      <p>
+        Adoptar prácticas sustentables significa utilizar los recursos naturales de manera responsable para satisfacer nuestras necesidades actuales sin comprometer las futuras generaciones.
+      </p>
+      <p>
+        Ejemplos incluyen: uso de transporte público, reciclaje, ahorro de energía y agua, consumo responsable y reforestación.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/practicas-sustentables.jpg" alt="Prácticas sustentables">
+    </div>
+  </div>
+
+  <!-- HUELLAS DE CARBONO -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>¿Qué es la huella de carbono?</h2>
+      <p>
+        La huella de carbono es la cantidad total de gases de efecto invernadero que generamos directa o indirectamente a través de nuestras actividades, como transporte, consumo de energía y alimentación.
+      </p>
+      <p>
+        Reducir la huella de carbono es fundamental para combatir el cambio climático y proteger el planeta.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/huella-carbono.jpg" alt="Huella de carbono">
+    </div>
+  </div>
+
+  <!-- RECOMENDACIONES PSICOLÓGICAS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Recomendaciones psicológicas para cuidar el medio ambiente</h2>
+      <ul>
+        <li>Fomentar hábitos diarios responsables, como apagar luces y reciclar.</li>
+        <li>Educar a familiares y amigos sobre la importancia del medio ambiente.</li>
+        <li>Practicar la conexión con la naturaleza para aumentar la conciencia ecológica.</li>
+        <li>Gestionar la ansiedad ambiental realizando acciones concretas de cambio.</li>
+        <li>Establecer metas sostenibles personales y comunitarias.</li>
+      </ul>
+      <p>
+        La psicología ambiental ayuda a entender cómo nuestras decisiones impactan el entorno y nos motiva a mantener un estilo de vida sostenible.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/psicologia-ambiental.jpg" alt="Psicología ambiental">
+    </div>
+  </div>
+
+  <!-- CONCLUSIÓN -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Conclusión</h2>
+      <p>
+        Adoptar prácticas sostenibles, reducir nuestra huella de carbono y fomentar hábitos responsables no solo protege el medio ambiente, sino que también mejora nuestra calidad de vida y bienestar psicológico.
+      </p>
+      <p>
+        Cada acción cuenta para crear un planeta más sano y sostenible para las próximas generaciones.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 SamuelCompanyX
+</footer>
+
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("loader").classList.add("hide");
+});
+
+const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+
+function openMenu() {
+  menu.classList.add("open");
+  overlay.classList.add("show");
+}
+function closeMenu() {
+  menu.classList.remove("open");
+  overlay.classList.remove("show");
+}
+
+if (localStorage.getItem("dark")) {
+  document.body.classList.add("dark");
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark", true);
+  } else {
+    localStorage.removeItem("dark");
+  }
+}
+
+/* Animación tipo Apple */
+const elements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+    else entry.target.classList.remove("show");
+  });
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+

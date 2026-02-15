@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustentabilidad</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Animación tipo Apple */
+    .reveal {
+      opacity: 0;
+      transform: translateY(60px) scale(0.96);
+      transition: all 0.8s cubic-bezier(.19,1,.22,1);
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Imagen de ejemplo si no hay IMG */
+    .image img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">Eco-Educa</div>
+  <div>
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    <button class="dark-btn" onclick="toggleDark()">🌙</button>
+  </div>
+</header>
+
+<!-- MENÚ LATERAL -->
+<div class="side-menu" id="menu">
+  <div class="menu-top">
+    <strong>Eco-Educa</strong>
+    <span class="close-btn" onclick="closeMenu()">✕</span>
+  </div>
+
+  <a href="index.html">🏠 Inicio</a>
+  <a href="sustentabilidad.html">🌱 Sustentabilidad</a>
+  <a href="sostenibilidad.html">♻️ Sostenibilidad</a>
+  <a href="medio-ambiente.html">🌍 Medio Ambiente</a>
+  <a href="problemas-ambientales.html">⚠️ Problemas</a>
+  <a href="cambio-climatico.html">🌡️ Cambio Climático</a>
+  <a href="contaminacion.html">🏭 Contaminación</a>
+  <a href="reciclaje.html">🔄 Reciclaje</a>
+  <a href="energia-renovable.html">☀️ Energías</a>
+  <a href="biodiversidad.html">🦋 Biodiversidad</a>
+  <a href="agua.html">💧 Agua</a>
+  <a href="desarrollo-sustentable.html">🌿 Desarrollo Sustentable</a>
+
+  <hr>
+  <a href="conocenos.html">👤 Conócenos</a>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Sustentabilidad</h1>
+  <div class="green-line"></div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+  <!-- ¿Qué es sustentabilidad? -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>¿Qué es la sustentabilidad?</h2>
+      <p>
+        La sustentabilidad es la capacidad de satisfacer las necesidades del presente
+        sin comprometer la capacidad de las futuras generaciones para satisfacer sus propias necesidades.
+        Se centra en el equilibrio entre factores ambientales, sociales y económicos.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/sustentabilidad.jpg" alt="Sustentabilidad.jpg">
+    </div>
+  </div>
+
+  <!-- Principios -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Principios de la sustentabilidad</h2>
+      <ul>
+        <li>Uso responsable de recursos naturales</li>
+        <li>Conservación de biodiversidad y ecosistemas</li>
+        <li>Reducción de residuos y contaminación</li>
+        <li>Desarrollo social y equidad</li>
+        <li>Economía circular y energías limpias</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="IMG/principios.jpg" alt="Principios.jpg">
+    </div>
+  </div>
+
+  <!-- Causas y problemas -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Causas y problemas relacionados</h2>
+      <p>
+        La falta de planificación urbana, la sobreexplotación de recursos,
+        la contaminación y el consumo excesivo generan desequilibrios ambientales
+        que comprometen la sustentabilidad a largo plazo.
+      </p>
+    </div>
+  </div>
+
+  <!-- Beneficios -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Beneficios de la sustentabilidad</h2>
+      <ul>
+        <li>Conservación de la biodiversidad</li>
+        <li>Mejor calidad de aire y agua</li>
+        <li>Reducción de gases de efecto invernadero</li>
+        <li>Economía más eficiente y resiliente</li>
+        <li>Mejora del bienestar social</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="IMG/beneficios.jpg" alt="Beneficios.jpg">
+    </div>
+  </div>
+
+  <!-- Prácticas sustentables -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Prácticas sustentables</h2>
+      <ul>
+        <li>Reciclaje y separación de residuos</li>
+        <li>Ahorro de agua y energía</li>
+        <li>Uso de transporte público o bicicletas</li>
+        <li>Consumo responsable de alimentos y productos</li>
+        <li>Plantación de árboles y protección de ecosistemas</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Recomendaciones psicológicas -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Recomendaciones psicológicas</h2>
+      <p>
+        Adoptar hábitos sustentables no solo ayuda al planeta, sino que también mejora
+        el bienestar personal: genera sentido de propósito, reduce ansiedad ambiental
+        y fomenta responsabilidad social.
+      </p>
+    </div>
+  </div>
+
+  <!-- Huella de carbono -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Huella de carbono</h2>
+      <p>
+        La huella de carbono mide la cantidad de gases de efecto invernadero
+        que se generan directa o indirectamente por nuestras actividades.
+        Reducirla contribuye a la sustentabilidad global y combate el cambio climático.
+      </p>
+    </div>
+  </div>
+
+  <!-- Conclusión -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Conclusión</h2>
+      <p>
+        La sustentabilidad es un camino necesario para garantizar un futuro saludable
+        y equilibrado. Adoptar prácticas conscientes, energías limpias y hábitos responsables
+        permite proteger el medio ambiente y mejorar la calidad de vida.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Eco-Educa
+</footer>
+
+<script>
+  // Loader
+  window.addEventListener("load", () => {
+    document.getElementById("loader").classList.add("hide");
+  });
+
+  // Menu lateral
+  const menu = document.getElementById("menu");
+  const overlay = document.getElementById("overlay");
+
+  function openMenu() { menu.classList.add("open"); overlay.classList.add("show"); }
+  function closeMenu() { menu.classList.remove("open"); overlay.classList.remove("show"); }
+
+  // Dark mode
+  if(localStorage.getItem("dark")) document.body.classList.add("dark");
+  function toggleDark() {
+    document.body.classList.toggle("dark");
+    localStorage.setItem("dark", document.body.classList.contains("dark") ? "true" : "false");
+  }
+
+  // Animación suave tipo Apple
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add("show");
+      else entry.target.classList.remove("show"); // permite subir y bajar animando
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

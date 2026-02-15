@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contaminación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">Eco-Educa</div>
+  <div>
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    <button class="dark-btn" onclick="toggleDark()">🌙</button>
+  </div>
+</header>
+
+<!-- MENÚ IZQUIERDO -->
+<div class="side-menu" id="menu">
+  <div class="menu-top">
+    <strong>Eco-Educa</strong>
+    <span class="close-btn" onclick="closeMenu()">✕</span>
+  </div>
+
+  <a href="index.html">🏠 Inicio</a>
+  <a href="sustentabilidad.html">🌱 Sustentabilidad</a>
+  <a href="sostenibilidad.html">♻️ Sostenibilidad</a>
+  <a href="medio-ambiente.html">🌍 Medio Ambiente</a>
+  <a href="problemas-ambientales.html">⚠️ Problemas</a>
+  <a href="cambio-climatico.html">🌡️ Cambio Climático</a>
+  <a href="contaminacion.html">🏭 Contaminación</a>
+  <a href="reciclaje.html">🔄 Reciclaje</a>
+  <a href="energia-renovable.html">☀️ Energías</a>
+  <a href="biodiversidad.html">🦋 Biodiversidad</a>
+  <a href="agua.html">💧 Agua</a>
+  <a href="desarrollo-sustentable.html">🌿 Desarrollo Sustentable</a>
+
+  <div class="sidebar-bottom">
+    <a href="conocenos.html">👤 Conócenos</a>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Contaminación</h1>
+  <div class="green-line"></div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+  <!-- DEFINICIÓN -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>¿Qué es la contaminación?</h2>
+      <p>
+        La contaminación es la introducción de sustancias, energía o agentes físicos, químicos o biológicos en el medio ambiente, causando efectos adversos para los ecosistemas, la salud humana y la calidad de vida.
+      </p>
+      <p>
+        Puede afectar aire, agua, suelo, alimentos y la biodiversidad, contribuyendo a problemas globales como el cambio climático.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/contaminacion-general.jpg" alt="Contaminación general">
+    </div>
+  </div>
+
+  <!-- TIPOS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Tipos de contaminación</h2>
+      <ul>
+        <li><strong>Aire:</strong> Emisión de gases tóxicos, smog industrial y vehicular.</li>
+        <li><strong>Agua:</strong> Vertidos químicos, plásticos y aguas residuales.</li>
+        <li><strong>Suelo:</strong> Uso de pesticidas, fertilizantes, residuos sólidos peligrosos.</li>
+        <li><strong>Acústica:</strong> Ruido excesivo por tráfico, industria y actividades humanas.</li>
+        <li><strong>Lumínica:</strong> Exceso de luz artificial que altera ecosistemas y salud.</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="IMG/tipos-contaminacion.jpg" alt="Tipos de contaminación">
+    </div>
+  </div>
+
+  <!-- CAUSAS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Causas principales</h2>
+      <ul>
+        <li>Emisiones industriales y transporte a combustión.</li>
+        <li>Deforestación y quema de residuos.</li>
+        <li>Uso excesivo de plásticos y químicos.</li>
+        <li>Falta de tratamiento de aguas residuales.</li>
+        <li>Dependencia de combustibles fósiles para energía.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONSECUENCIAS -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Consecuencias</h2>
+      <ul>
+        <li>Problemas respiratorios y de salud en humanos.</li>
+        <li>Alteración de ecosistemas y pérdida de biodiversidad.</li>
+        <li>Acidificación del suelo y cuerpos de agua.</li>
+        <li>Contribución al cambio climático.</li>
+        <li>Impactos económicos en agricultura, pesca y turismo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MÉXICO -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Contaminación en México</h2>
+      <p>
+        Las principales ciudades enfrentan alta contaminación atmosférica debido a transporte, industria y quema de residuos. Los ríos y costas presentan problemas de contaminación hídrica por vertidos domésticos e industriales.
+      </p>
+    </div>
+    <div class="image">
+      <img src="IMG/contaminacion-mexico.jpg" alt="Contaminación en México">
+    </div>
+  </div>
+
+  <!-- MUNDO -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Situación global</h2>
+      <p>
+        El mundo enfrenta contaminación masiva en aire, agua y suelo. Grandes urbes e industrias generan impactos negativos en salud y ecosistemas. Acuerdos internacionales buscan reducir emisiones y proteger recursos naturales.
+      </p>
+    </div>
+  </div>
+
+  <!-- SOLUCIONES -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Soluciones y mitigación</h2>
+      <ul>
+        <li>Transición a energías renovables.</li>
+        <li>Reciclaje y manejo responsable de residuos.</li>
+        <li>Tratamiento de aguas y reducción de vertidos.</li>
+        <li>Reforestación y conservación de ecosistemas.</li>
+        <li>Educación ambiental y políticas públicas efectivas.</li>
+      </ul>
+    </div>
+    <div class="image">
+      <img src="IMG/contaminacion-soluciones.jpg" alt="Soluciones a la contaminación">
+    </div>
+  </div>
+
+  <!-- CONCLUSIÓN -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Conclusión</h2>
+      <p>
+        La contaminación es un desafío crítico que requiere acción inmediata. Adoptar hábitos sostenibles, políticas de protección ambiental y tecnologías limpias es esencial para un planeta saludable para futuras generaciones.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 SamuelCompanyX
+</footer>
+
+<script>
+window.addEventListener("load", () => {
+  document.getElementById("loader").classList.add("hide");
+});
+
+const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+
+function openMenu() {
+  menu.classList.add("open");
+  overlay.classList.add("show");
+}
+function closeMenu() {
+  menu.classList.remove("open");
+  overlay.classList.remove("show");
+}
+
+if (localStorage.getItem("dark")) {
+  document.body.classList.add("dark");
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark", true);
+  } else {
+    localStorage.removeItem("dark");
+  }
+}
+
+/* Animación tipo Apple */
+const elements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+    else entry.target.classList.remove("show");
+  });
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
