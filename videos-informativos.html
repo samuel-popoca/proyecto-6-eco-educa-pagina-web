@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos Informativos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">Eco-Educa</div>
+  <div>
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    <button class="dark-btn" onclick="toggleDark()">🌙</button>
+  </div>
+</header>
+
+<!-- MENÚ -->
+<div class="side-menu" id="menu">
+  <div class="menu-top">
+    <strong>Eco-Educa</strong>
+    <span class="close-btn" onclick="closeMenu()">✕</span>
+  </div>
+
+  <a href="index.html">🏠 Inicio</a>
+  <a href="sustentabilidad.html">🌱 Sustentabilidad</a>
+  <a href="sostenibilidad.html">♻️ Sostenibilidad</a>
+  <a href="medio-ambiente.html">🌍 Medio Ambiente</a>
+  <a href="problemas-ambientales.html">⚠️ Problemas</a>
+  <a href="cambio-climatico.html">🌡️ Cambio Climático</a>
+  <a href="contaminacion.html">🏭 Contaminación</a>
+  <a href="reciclaje.html">🔄 Reciclaje</a>
+  <a href="energia-renovable.html">☀️ Energías</a>
+  <a href="biodiversidad.html">🦋 Biodiversidad</a>
+  <a href="agua.html">💧 Agua</a>
+  <a href="desarrollo-sustentable.html">🌿 Desarrollo Sustentable</a>
+  <a href="videos-informativos.html">🎥 Videos</a>
+
+  <div class="sidebar-bottom">
+    <a href="conocenos.html">👤 Conócenos</a>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>Videos Informativos</h1>
+  <div class="green-line"></div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+  <!-- INTRO -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Aprende con videos</h2>
+      <p>
+        En esta sección encontrarás videos educativos sobre medio ambiente,
+        cambio climático, reciclaje y desarrollo sostenible. Son materiales
+        informativos que te ayudarán a entender mejor los problemas ambientales
+        y cómo solucionarlos.
+      </p>
+    </div>
+  </div>
+
+  <!-- VIDEO 1 -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>¿Qué es el cambio climático?</h2>
+      <p>Explicación sencilla del calentamiento global y sus efectos.</p>
+    </div>
+    <div class="image">
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/watch?v=ZSl4BePAqAg"
+        title="Cambio climático"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- VIDEO 2 -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>La importancia del reciclaje</h2>
+      <p>Cómo reciclar correctamente y reducir la contaminación.</p>
+    </div>
+    <div class="image">
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/2DqM4aVq9iA"
+        title="Reciclaje"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- VIDEO 3 -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>¿Qué es el desarrollo sustentable?</h2>
+      <p>Explicación clara sobre sostenibilidad y futuro del planeta.</p>
+    </div>
+    <div class="image">
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/Ta6Ub8YbXfY"
+        title="Desarrollo sustentable"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- VIDEO 4 -->
+  <div class="content reveal">
+    <div class="text">
+      <h2>Cómo cuidar el medio ambiente</h2>
+      <p>Acciones simples que puedes hacer desde casa.</p>
+    </div>
+    <div class="image">
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/8yo99_T4QZI"
+        title="Cuidar el medio ambiente"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 SamuelCompanyX
+</footer>
+
+<script>
+// LOADER (rápido, sin bugs)
+window.addEventListener("load", () => {
+  document.getElementById("loader").classList.add("hide");
+});
+
+// MENU
+const menu = document.getElementById("menu");
+const overlay = document.getElementById("overlay");
+
+function openMenu() {
+  menu.classList.add("open");
+  overlay.classList.add("show");
+}
+function closeMenu() {
+  menu.classList.remove("open");
+  overlay.classList.remove("show");
+}
+
+// DARK MODE
+if (localStorage.getItem("dark")) {
+  document.body.classList.add("dark");
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("dark", true);
+  } else {
+    localStorage.removeItem("dark");
+  }
+}
+
+// ANIMACIÓN TIPO APPLE
+const elements = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+    else entry.target.classList.remove("show");
+  });
+}, { threshold: 0.2 });
+
+elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
